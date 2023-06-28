@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: #181818;
+    line-height: 1.4;
+    overflow: hidden;
+}
+
+/* utilities */
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+/* wrapper */
+#wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+/* left side card */
+#left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#signin-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+#signin-card .logo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 7vh;
+}
+
+#signin-card .logo-content i {
+    color: #ff006e;
+    margin-right: 0.3rem;
+    font-size: 2.5rem;
+    animation: animate 2s linear;
+}
+
+@keyframes animate {
+    from {
+        transform: translateX(300px);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+#signin-card .form-content {
+    width: 80%;
+    padding-bottom: 3rem;
+}
+
+#signin-card #text-input {
+    width: 100%;
+    background: #181818;
+    color: #f4f4f4;
+    border: 1px solid #555;
+    padding: 0.8rem 1rem;
+    border-radius: 3px;
+    margin-bottom: 2rem;
+    margin-top: 0.3rem;
+}
+
+#signin-card .form-content label {
+    font-size: 0.9rem;
+}
+
+#signin-card .primary-btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 3px;
+    background: #8338ec;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+#signin-card .primary-btn:hover {
+    background: #ff006e;
+}
+
+#signin-card .links a {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+
+#signin-card .or {
+    color: #f4f4f4;
+    margin: 1rem 0;
+}
+
+.btn-secondary {
+    display: block;
+    color: #fff;
+    border: 2px solid #fff;
+    text-align: center;
+    width: 60%;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+.btn-secondary:hover {
+    border-color: #ff006e;
+    color: #ff006e;
+}
+
+#main-footer {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+#main-footer a {
+    color: #8338ec;
+}
+
+
+#right {
+    flex: 1;
+}
+
+#right .showcase {
+    background: url('../img/showcase-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#right .showcase h1 {
+    font-size: 3rem
+}
+
+#right .showcase .btn-secondary {
+    width: 30%;
+    margin-top: 0.3rem;
+    background: #8338ec;
+    border: none;
+}
+
+#right .showcase .btn-secondary:hover {
+    background: #ff006e;
+    color: #fff;
+}
+
+@media(min-width: 1200px) {
+    #left {
+        flex: 4;
+    }
+
+
+    #right {
+        flex: 6;
+    }
+}
+
+@media(max-width:789px) {
+    #right {
+        display: none;
+    }
+}
